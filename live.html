@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream | Mukono Love Church</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #8a2be2;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #8a2be2;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+        }
+        .countdown {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .engage-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn {
+            background-color: #8a2be2;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #6d19b5;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Mukono Love Church - Live Stream</h2>
+</header>
+
+<div class="container">
+    <section class="video-section">
+        <h1>Welcome to Our Live Service</h1>
+        <p>Join us as we worship and grow together in faith. Experience God's presence right from your home.</p>
+        <iframe src="https://www.youtube.com/embed/your-video-id-here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <!-- Countdown timer (optional) -->
+        <div class="countdown">
+            Live service starts in: <span id="countdown-timer">00:00:00</span>
+        </div>
+    </section>
+
+    <section class="engage-section">
+        <h2>Engage With Us</h2>
+        <p>Connect with our church community, request prayers, or support our ministry.</p>
+        <a href="testimonial.html" class="btn">View gallery as you wait</a>
+        <a href="payments/payment.html" class="btn">Donate</a>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Mukono Love Church. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Countdown Timer Script (optional)
+    function countdown() {
+        const countDownDate = new Date("Sept 30, 2024 10:00:00").getTime();
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown-timer").innerHTML = "LIVE NOW!";
+            }
+        }, 1000);
+    }
+    countdown();
+</script>
+
+</body>
+</html>
