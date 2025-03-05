@@ -1,0 +1,16 @@
+<svg width="50" height="80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Page -->
+  <rect x="5" y="10" width="20" height="60" fill="#f5f5dc" />
+  <line x1="5" y1="10" x2="5" y2="70" stroke="#654321" stroke-width="1"/>
+
+  <!-- Right Page -->
+  <rect x="25" y="10" width="20" height="60" fill="#f5f5dc" />
+  <line x1="45" y1="10" x2="45" y2="70" stroke="#654321" stroke-width="1"/>
+
+  <!-- Pages Outline -->
+  <rect x="5" y="10" width="40" height="60" fill="none" stroke="#8B4513" stroke-width="2" rx="2" ry="2"/>
+  
+  <!-- Cross on the left page -->
+  <rect x="12" y="30" width="3" height="15" fill="gold"/>
+  <rect x="8.5" y="37" width="10" height="3" fill="gold"/>
+</svg>
